@@ -18,7 +18,7 @@ time.sleep(1)
 wd.find_element(by=By.XPATH, value='//*[@id="bottom-area"]/div[4]/div/div[1]/div[3]/div/div/div/div/div/button[3]').click()
 
 while True:
-# try:
+  try:
     if is_buy_sell == "buy" and wd.find_element(by=By.XPATH, value='//*[@id="bottom-area"]/div[4]/div/div[2]/div/div/div/div/table/tbody[1]/tr[2]/td[2]').text == "StochSE":
         ### 賣出
         print("sell")
@@ -31,7 +31,7 @@ while True:
         is_buy_sell = wd.find_element(by=By.XPATH, value='//*[@id="bottom-area"]/div[4]/div/div[2]/div/div/div/div/table/tbody[1]/tr[2]/td[2]').text
         print("start sell or buy : ", is_buy_sell)
 
-# except:
-   # pass
+  except:
+    pass
 
-    time.sleep(0.5)
+  time.sleep(0.5)
