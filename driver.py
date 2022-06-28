@@ -19,11 +19,11 @@ wd.find_element(by=By.XPATH, value='//*[@id="bottom-area"]/div[4]/div/div[1]/div
 
 while True:
   try:
-    if is_buy_sell == "buy" and wd.find_element(by=By.XPATH, value='//*[@id="bottom-area"]/div[4]/div/div[2]/div/div/div/div/table/tbody[1]/tr[2]/td[2]').text == "StochSE":
+    if is_buy_sell == "buy" and wd.find_element(by=By.XPATH, value='//*[@id="bottom-area"]/div[4]/div/div[2]/div/div/div/div/table/tbody[1]/tr[2]/td[2]').text == "StochSE": # StochSE要改成你策略設定的文字
         ### 賣出
         print("sell")
         is_buy_sell = "sell"
-    elif is_buy_sell == "sell" and wd.find_element(by=By.XPATH, value='//*[@id="bottom-area"]/div[4]/div/div[2]/div/div/div/div/table/tbody[1]/tr[2]/td[2]').text == "StochLE":
+    elif is_buy_sell == "sell" and wd.find_element(by=By.XPATH, value='//*[@id="bottom-area"]/div[4]/div/div[2]/div/div/div/div/table/tbody[1]/tr[2]/td[2]').text == "StochLE":  # StochLE要改成你策略設定的文字
         ### 買入
         print("buy")
         is_buy_sell = "buy"
